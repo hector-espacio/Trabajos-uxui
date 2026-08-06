@@ -1,1 +1,528 @@
-hola
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Trabajos de UX/UI</title>
+    <style>
+        /* Estilos generales limpios, colores claros y sin sombras */
+        body {
+            background-color: #f7f9fa;
+            color: #222222;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #0088cc;
+            margin-bottom: 15px;
+        }
+
+        p.subtitulo {
+            font-size: 22px;
+            color: #444444;
+            line-height: 1.5;
+            margin-top: 0;
+        }
+
+        /* Contenedor de proyectos */
+        .contenedor-proyectos {
+            max-width: 1200px; /* Ampliado para que entren bien las 3 columnas */
+            margin: 0 auto 30px auto;
+            min-height: 250px;
+            display: flex;         
+            flex-wrap: wrap;       
+            gap: 20px;             
+        }
+
+        /* Tarjetas adaptables por filas con Flexbox */
+        .tarjeta {
+            background-color: #ffffff;
+            border: 2px solid #dddddd;
+            border-radius: 8px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            /* Por defecto en móviles: 1 elemento por fila */
+            flex: 1 1 100%; 
+            box-sizing: border-box;
+        }
+
+        .tarjeta h2 {
+            font-size: 28px;
+            color: #111111;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .tarjeta p {
+            font-size: 20px;
+            color: #555555;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        /* Botón claro y grande */
+        .boton {
+            background-color: #0088cc;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .boton:hover {
+            background-color: #006699;
+        }
+
+        /* Sistema de Paginación */
+        .paginacion-contenedor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .btn-pagina {
+            background-color: #ffffff;
+            color: #0088cc;
+            border: 2px solid #0088cc;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn-pagina:hover:not(:disabled) {
+            background-color: #0088cc;
+            color: #ffffff;
+        }
+
+        .btn-pagina:disabled {
+            border-color: #cccccc;
+            color: #aaaaaa;
+            cursor: not-allowed;
+            background-color: #f0f0f0;
+        }
+
+        .info-pagina {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        /* Tablet: 2 elementos por fila */
+        @media (min-width: 768px) {
+            .tarjeta {
+                flex: 1 1 calc(50% - 10px);
+            }
+        }
+
+        /* PC / Escrititorio: 3 elementos por fila */
+        @media (min-width: 1024px) {
+            .tarjeta {
+                flex: 1 1 calc(33.333% - 14px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mis Trabajos de UX/UI</h1>
+        <p class="subtitulo">Panel central de navegación para explorar mis prácticas, componentes y aplicaciones desarrolladas paso a paso.</p>
+    </header>
+
+    <main class="contenedor-proyectos" id="gridProyectos">
+    </main>
+  
+  <div class="tarjeta">
+    <div>
+        <h2>01. Introducción al Diseño UX/UI</h2>
+        <p>Conceptos fundamentales, diferencias y sinergia entre la Experiencia de Usuario y la Interfaz.</p>
+    </div>
+    <a href="./01-introduccion-ux-ui/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>02. Principios de Usabilidad</h2>
+        <p>Fundamentos de accesibilidad, legibilidad y eficiencia para interfaces digitales intuitivas.</p>
+    </div>
+    <a href="./02-principios-usabilidad/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>03. Manejo de Imágenes para Productos Digitales</h2>
+        <p>Optimización, formatos y peso de recursos visuales para mejorar el rendimiento web y móvil.</p>
+    </div>
+    <a href="./03-manejo-imagenes/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>04. Estructura de un Reporte de Investigación UX</h2>
+        <p>Metodología y documentación de hallazgos iniciales para alinear al equipo de producto.</p>
+    </div>
+    <a href="./04-reporte-investigacion-ux/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>05. Análisis de Proyectos Finales Integradores</h2>
+        <p>Estudio de casos reales aplicados para entender el flujo completo de diseño y desarrollo.</p>
+    </div>
+    <a href="./05-analisis-proyectos/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>06. Diseño Centrado en las Personas (HCD)</h2>
+        <p>Filosofía de diseño enfocada en las necesidades, emociones y contextos de los usuarios reales.</p>
+    </div>
+    <a href="./06-diseno-centrado-personas/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>07. Ciclo de Iteración</h2>
+        <p>Proceso cíclico de mejora continua basado en pruebas, retroalimentación y ajustes de diseño.</p>
+    </div>
+    <a href="./07-ciclo-iteracion/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>08. Planteamiento del Problema</h2>
+        <p>Técnicas de definición clara para enfocar los esfuerzos del equipo en el dolor principal del usuario.</p>
+    </div>
+    <a href="./08-planteamiento-problema/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>09. Desk Research (Investigación de Escritorio)</h2>
+        <p>Recopilación y análisis de fuentes secundarias, datos existentes y literatura de mercado.</p>
+    </div>
+    <a href="./09-desk-research/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>10. Descubrimiento de Insights</h2>
+        <p>Hallazgos clave y revelaciones profundas sobre el comportamiento y motivaciones de la audiencia.</p>
+    </div>
+    <a href="./10-descubrimiento-insights/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>11. Relación Usuario, Problema y Solución</h2>
+        <p>Matriz de alineación para garantizar que la propuesta de valor responda directamente a una necesidad real.</p>
+    </div>
+    <a href="./11-usuario-problema-solucion/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>12. Introducción al Benchmarking</h2>
+        <p>Análisis comparativo de productos competidores para identificar estándares de la industria.</p>
+    </div>
+    <a href="./12-introduccion-benchmarking/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>13. Análisis de Apps Similares</h2>
+        <p>Evaluación de interfaces existentes para detectar puntos fuertes y debilidades funcionales.</p>
+    </div>
+    <a href="./13-analisis-apps-similares/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>14. Benchmarking Competitivo Profundo</h2>
+        <p>Auditoría exhaustiva de flujos, arquitectura de información y patrones de diseño de la competencia.</p>
+    </div>
+    <a href="./14-benchmarking-competitivo/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>15. Informe de Conclusiones de Benchmarking</h2>
+        <p>Sintetizar datos comparativos en oportunidades concretas de diferenciación para el producto.</p>
+    </div>
+    <a href="./15-informe-conclusiones-benchmarking/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>16. Mapa de Empatía</h2>
+        <p>Herramienta visual para categorizar lo que el usuario piensa, siente, oye, ve, dice y hace.</p>
+    </div>
+    <a href="./16-mapa-empatia/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>17. User Persona y Proto Persona</h2>
+        <p>Creación de arquetipos basados en datos reales o supuestos informados para guiar las decisiones.</p>
+    </div>
+    <a href="./17-user-persona/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>18. Perfiles Detallados de Usuarios Principales</h2>
+        <p>Desarrollo de contextos demográficos, psicográficos, frustraciones y metas de los usuarios core.</p>
+    </div>
+    <a href="./18-perfiles-detallados/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>19. Investigación Cuantitativa vs. Cualitativa</h2>
+        <p>Criterios de selección entre métodos orientados a datos numéricos y métodos orientados a comprender el porqué.</p>
+    </div>
+    <a href="./19-investigacion-cuanti-cuali/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>20. Metodología Cuantitativa: Encuestas</h2>
+        <p>Diseño de cuestionarios estructurados orientados a recolectar métricas y tendencias a escala.</p>
+    </div>
+    <a href="./20-metodologia-cuantitativa-encuestas/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>21. Redacción de Preguntas Cuantificables</h2>
+        <p>Formulación de ítems cerrados, escalas Likert y opciones múltiples libres de sesgos.</p>
+    </div>
+    <a href="./21-preguntas-cuantificables/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>22. Aplicación de Encuestas a Usuarios</h2>
+        <p>Estrategias de distribución, muestreo y recolección efectiva de datos demográficos y de uso.</p>
+    </div>
+    <a href="./22-aplicacion-encuestas/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>23. Informe de Resultados de Encuestas</h2>
+        <p>Procesamiento de datos estadísticos, gráficos de distribución y extracción de métricas clave.</p>
+    </div>
+    <a href="./23-informe-encuestas/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>24. Metodología Cualitativa: Entrevistas</h2>
+        <p>Preparación de guiones de conversación semiestructurados para profundizar en la experiencia del usuario.</p>
+    </div>
+    <a href="./24-metodologia-cualitativa-entrevistas/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>25. Formulación de Preguntas Cualificables</h2>
+        <p>Creación de preguntas abiertas que inviten a la narrativa y eviten respuestas binarias de sí o no.</p>
+    </div>
+    <a href="./25-preguntas-cualificables/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>26. Ejecución de Entrevistas a Usuarios</h2>
+        <p>Técnicas de escucha activa, manejo de silencios y profundización empática durante la sesión.</p>
+    </div>
+    <a href="./26-ejecucion-entrevistas/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>27. Informe y Transcripción de Entrevistas</h2>
+        <p>Análisis de contenido, codificación de respuestas y extracción de citas textuales representativas.</p>
+    </div>
+    <a href="./27-informe-entrevistas/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>28. Introducción al User Journey Map (UJM)</h2>
+        <p>Concepto y propósito del mapeo de la trayectoria del usuario a lo largo de un servicio o app.</p>
+    </div>
+    <a href="./28-introduccion-ujm/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>29. Objetivos y Zonas del UJM</h2>
+        <p>Delimitación estructural de las áreas que componen un mapa de viaje para mantener el foco analítico.</p>
+    </div>
+    <a href="./29-objetivos-zonas-ujm/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>30. Etapas, Interacciones y Canales en el UJM</h2>
+        <p>Mapeo cronológico de las fases de interacción, puntos de contacto digitales y físicos del usuario.</p>
+    </div>
+    <a href="./30-etapas-interacciones-canales/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>31. Elementos y Línea de Tiempo del UJM</h2>
+        <p>Integración de pensamientos, emociones (curva de felicidad) y fricciones temporales del recorrido.</p>
+    </div>
+    <a href="./31-elementos-linea-tiempo-ujm/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>32. Mapeo de Experiencias Actuales (As-Is)</h2>
+        <p>Representación fiel de los dolores y obstáculos que enfrenta el usuario en el proceso actual.</p>
+    </div>
+    <a href="./32-experiencias-actuales/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>33. Mapeo de Experiencias Deseadas (To-Be)</h2>
+        <p>Diseño de la visión ideal del servicio optimizado para eliminar las fricciones detectadas.</p>
+    </div>
+    <a href="./33-experiencias-deseadas/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>34. Análisis Cruzado: Usuario y Benchmarking</h2>
+        <p>Sintetizar los insights cualitativos/cuantitativos con los hallazgos de la competencia en el mapa.</p>
+    </div>
+    <a href="./34-analisis-cruzado/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>35. Point of View (POV)</h2>
+        <p>Formulación de la declaración de perspectiva que sintetiza al usuario, su necesidad y la revelación.</p>
+    </div>
+    <a href="./35-point-of-view/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>36. Estructura "Usuario, Necesita, Por Qué"</h2>
+        <p>Plantilla de enunciación estratégica para conectar el arquetipo con el motor motivacional profundo.</p>
+    </div>
+    <a href="./36-usuario-necesita-por-que/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>37. Narrativa en UX (Storytelling)</h2>
+        <p>Uso de técnicas de estructuración de historias para conectar emocionalmente con stakeholders y usuarios.</p>
+    </div>
+    <a href="./37-storytelling-ux/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>38. Técnicas de Empatía Avanzada</h2>
+        <p>Estrategias de inmersión y conexión profunda para validar soluciones centradas en las personas.</p>
+    </div>
+    <a href="./38-empatizar-con-usuario/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>39. Cuestionarios y Evaluaciones en Campus Virtual</h2>
+        <p>Mecanismos de autoevaluación teórica para afianzar los conceptos fundamentales de la investigación UX.</p>
+    </div>
+    <a href="./39-cuestionarios-campus/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+<div class="tarjeta">
+    <div>
+        <h2>40. Pre-Entrega de Proyecto UX/UI</h2>
+        <p>Consolidación de la documentación de investigación, reportes, personas, UJM y POV para validación final.</p>
+    </div>
+    <a href="./40-pre-entrega-proyecto/index.html" class="boton">Ver Ejemplo</a>
+</div>
+
+  
+
+    <div class="paginacion-contenedor" id="controlesPaginacion">
+        <button class="btn-pagina" id="btnAnterior" onclick="cambiarPagina(-1)">Anterior</button>
+        <span class="info-pagina" id="infoPagina">Página 1 de 7</span>
+        <button class="btn-pagina" id="btnSiguiente" onclick="cambiarPagina(1)">Siguiente</button>
+    </div>
+
+    <script>
+        let paginaActual = 1;
+        const elementosPorPagina = 6;
+
+        function actualizarPaginacion() {
+            const tarjetas = document.querySelectorAll('.tarjeta');
+            const totalPaginas = Math.ceil(tarjetas.length / elementosPorPagina);
+
+            if (paginaActual > totalPaginas) {
+                paginaActual = totalPaginas;
+            }
+            if (paginaActual < 1) {
+                paginaActual = 1;
+            }
+
+            const indiceInicio = (paginaActual - 1) * elementosPorPagina;
+            const indiceFin = indiceInicio + elementosPorPagina;
+
+            tarjetas.forEach((tarjeta, i) => {
+                if (i >= indiceInicio && i < indiceFin) {
+                    tarjeta.style.display = "flex";
+                } else {
+                    tarjeta.style.display = "none";
+                }
+            });
+
+            document.getElementById('infoPagina').innerText = `Página ${paginaActual} de ${totalPaginas}`;
+            document.getElementById('btnAnterior').disabled = (paginaActual === 1);
+            document.getElementById('btnSiguiente').disabled = (paginaActual === totalPaginas);
+        }
+
+        function cambiarPagina(direccion) {
+            paginaActual += direccion;
+            actualizarPaginacion();
+        }
+
+        window.onload = function() {
+            actualizarPaginacion();
+        };
+    </script>
+
+</body>
+</html>
+
